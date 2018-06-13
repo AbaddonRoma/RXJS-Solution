@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <button (click)="timer = !timer">toggle timer</button>
+  <button (click)="interval = !interval">toggle interval</button>
+
+  <app-timer *ngIf="timer"></app-timer>
+
+  <app-interval *ngIf="interval"></app-interval>
+
+</div>
