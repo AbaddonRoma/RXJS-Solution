@@ -130,7 +130,11 @@ export class FakeHTTPService {
 
   private mergeSubjectAndQuestions(subject) {
     return this.getMergedQuestions([1, 2]).pipe(
-      map(data => data.map((dat: any) => dat.filter((d: any) => d.subjectID === subject)))
+      map(data => data.map((dat: any) => dat.filter((d: any) => d.subjectID === subject))),
+      map(question => ({
+        subject,
+        question
+      }))
     );
   }
 
